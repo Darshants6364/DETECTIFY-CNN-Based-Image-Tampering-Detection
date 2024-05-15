@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detectify - Fake Image Detection</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: white;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-image: url('static/background/background.jpg');
+            
+        }
+
+        header {
+            background-color: rgb(112, 117, 117);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-top: 35px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+            color: white;
+        }
+
+        input {
+            padding: 10px;
+            background-color: rgb(112, 117, 117);
+            color: #fff;
+            border: 1px solid #4caf50;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: rgb(112, 117, 117);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: white;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .error {
+            color: #ff3333;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .confidence {
+            color: white;
+            margin-top: 10px;
+        }
+
+        .result {
+            color: white;
+            margin-top: 10px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+
+        .openbox {
+            align-self: flex-start;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="openbox">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="http://127.0.0.1:5500/templates/home.html">Home</a>
+        <a href="#">Detectify</a>
+        <a href="http://127.0.0.1:5500/templates/overview.html">overview</a>
+        <a href="#">Contact</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+    </div>  
+    <header>
+        <h1>Detectify - Fake Image Detection</h1>
+    </header>
+    
+    <div class="container">
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form method="post" enctype="multipart/form-data">
+            <label for="file">Choose Image:</label>
+            <input type="file" name="file" accept=".jpg, .jpeg, .png" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if ela_image_path %}
+            <h2>ELA Image:</h2>
+            <img src="{{ ela_image_path }}" alt="ELA Image">
+
+            {% if result %}
+                <h2>Result:</h2>
+                <p class="confidence">Confidence: {{ confidence }}%</p>
+                <p class="result">{{ result }}</p>
+            {% endif %}
+        {% endif %}    
+    </div>
+
+    
+</body>
+</html>

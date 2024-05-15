@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detectify: Image Tampering Detection with Error Level Analysis</title>
+
+    <!-- Updated Color Palette -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #222;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            color: white;
+        }
+
+        header {
+            background-color: #707575;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-top: 35px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #707575;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav { padding-top: 15px; }
+            .sidenav a { font-size: 18px; }
+        }
+
+        .openbox {
+            align-self: flex-start;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="openbox">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="http://127.0.0.1:5500/templates/home.html">Home</a>
+            <a href="#">Detectify</a>
+            <a href="http://127.0.0.1:5500/templates/overview.html">overview</a>
+            <a href="#">Contact</a>
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </div>
+    <header>
+        <h1>Detectify: Image Tampering Detection with Error Level Analysis</h1>
+    </header>
+
+    <div class="container">
+        <h2>Introduction:</h2>
+        <p>Welcome to Detectify, your go-to solution for detecting image tampering using advanced Error Level Analysis (ELA) technology. Our platform empowers you to verify the authenticity and integrity of images with precision and ease.</p>
+
+        <h2>How it Works:</h2>
+        <p>Discover how Detectify utilizes Error Level Analysis to identify alterations in digital images. Our sophisticated algorithms analyze the compression levels within an image to pinpoint potential tampering, providing you with reliable results.</p>
+
+        <h2>Key Features:</h2>
+        <ul>
+            <li>Accurate Tampering Detection: Detectify employs cutting-edge techniques to identify even the subtlest alterations in images, ensuring robust authenticity verification.</li>
+            <li>User-Friendly Interface: Our intuitive interface makes it simple for users to upload images and receive detailed analysis reports swiftly.</li>
+            <li>Comprehensive Analysis: Gain insights into the specific areas of an image that may have been tampered with, enabling informed decision-making.</li>
+            <li>Secure and Confidential: Rest assured that your uploaded images and analysis results are handled with the utmost confidentiality and security.</li>
+        </ul>
+
+        <h2>Why Choose Detectify?</h2>
+        <p>Whether you're a journalist, investigator, or simply concerned about the authenticity of an image, Detectify offers a reliable solution backed by advanced technology and expertise.</p>
+
+        <h2>Get Started:</h2>
+        <p>Ready to verify the authenticity of your images? Simply upload your image to begin the analysis process and uncover any potential tampering.</p>
+        <button onclick="location.href='http://127.0.0.1:5000'">Detectify</button>
+
+        <h2>Testimonials:</h2>
+        <p>Don't just take our word for it! Hear from our satisfied users about their experiences with Detectify and how it has helped them ensure image integrity.</p>
+
+        <h2>About Us:</h2>
+        <p>Learn more about the team behind Detectify and our mission to combat image tampering and promote digital authenticity.</p>
+
+        <h2>Contact Us:</h2>
+        <p>Have questions or need assistance? Reach out to our support team for prompt and helpful assistance.</p>
+
+        
+
+        <h2>Call-to-Action:</h2>
+        <p>"Start Detecting Tampered Images Now!"</p>
+    </div>
+</body>
+
+</html>

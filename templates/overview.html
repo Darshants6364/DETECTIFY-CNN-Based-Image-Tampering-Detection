@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Project - Image Tampering Detection</title>
+
+    <!-- Include your CSS styling here -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color:rgb(34, 30, 30);
+            
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        header {
+            background-color: rgb(112, 117, 117);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-top: 35px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            color: white;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        button {
+            padding: 12px 20px;
+            background-color: rgb(112, 117, 117);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 0 auto; /* Center the button */
+        }
+
+        button:hover {
+            background-color: black;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            
+            background-color:black;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+
+        .openbox {
+            align-self: flex-start;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="openbox">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="http://127.0.0.1:5500/templates/home.html">Home</a>
+            <a href="#">Detectify</a>
+            <a href="http://127.0.0.1:5500/templates/overview.html">overview</a>
+            <a href="#">Contact</a>
+          </div>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+          
+          <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+    </div>      
+    <header>
+        <h1>About Project - Image Tampering Detection</h1>
+    </header>
+
+    <div class="container">
+        <p>Welcome to the Image Tampering Detection project. This project is designed to detect tampering or manipulation in images using sophisticated techniques, including Error Level Analysis (ELA) and Convolutional Neural Network (CNN).</p>
+
+        <img src="path-to-your-image1.jpg" alt="Project Image 1">
+        <p>This tool allows users to upload an image, and it processes the image to generate an ELA image. The ELA image helps identify regions with potentially altered content. The project utilizes a backend server for image processing and tampering detection using advanced algorithms.</p>
+
+        <img src="path-to-your-image2.jpg" alt="Project Image 2">
+        <p>Key Features:</p>
+        <ul>
+            <li>Upload and process images for tampering detection.</li>
+            <li>View the original and ELA images to identify potential tampered regions.</li>
+            <li>Backend integration for image processing using ELA and CNN.</li>
+        </ul>
+
+        <p>This project serves as a demonstration of image forensics techniques and their application in detecting potential image manipulations. Feel free to explore and use this tool for educational purposes.</p>
+
+        <p>For more details or inquiries, please contact us at <a href="mailto:your@email.com">your@email.com</a>.</p>
+    </div>
+    <button onclick="location.href='http://127.0.0.1:5000'">Detectify</button>
+</body>
+</html>
+
+ 
