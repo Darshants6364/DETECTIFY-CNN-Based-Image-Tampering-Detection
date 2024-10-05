@@ -7,5 +7,5 @@ To make the detection more accurate, a Convolutional Neural Network (CNN) is emp
 
 The result is a model that can accurately predict whether an image has been manipulated. This technology is useful for detecting fake images, deepfakes, or any form of image fraud in fields like forensics, journalism, and digital media.
 
-#Web Interface
-![Uploading Screenshot 2024-02-16 231520.png…]()
+Web Interface
+
