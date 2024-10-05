@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/dcd04fea-6bfc-40ac-ba50-44409b02055d)# DETECTIFY-CNN-Based-Image-Tampering-Detection
+# DETECTIFY-CNN-Based-Image-Tampering-Detection
 DETECTIFY: CNN-Based Image Tampering Detection is a project focused on identifying whether an image has been tampered with or manipulated. The goal of the project is to detect alterations in images, such as edits, forgeries, or modifications that might not be visible to the human eye.
 
 In this project, a technique called Error Level Analysis (ELA) is used to highlight areas in an image that might have been changed. ELA works by analyzing the compression levels in an image. When an image is edited, different parts may have different error levels, which can indicate tampering.
