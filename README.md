@@ -6,3 +6,6 @@ In this project, a technique called Error Level Analysis (ELA) is used to highli
 To make the detection more accurate, a Convolutional Neural Network (CNN) is employed. CNN is a type of deep learning model that is particularly good at recognizing patterns in images. By training the CNN with images that are both original and tampered, it learns to identify the subtle differences between them.
 
 The result is a model that can accurately predict whether an image has been manipulated. This technology is useful for detecting fake images, deepfakes, or any form of image fraud in fields like forensics, journalism, and digital media.
+
+#Web Interface
+![Uploading Screenshot 2024-02-16 231520.png…]()
