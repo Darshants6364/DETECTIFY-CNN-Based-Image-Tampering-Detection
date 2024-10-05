@@ -11,3 +11,10 @@ Web Interface
 ![image_alt](https://github.com/Darshants6364/DETECTIFY-CNN-Based-Image-Tampering-Detection/blob/96845a0a5cb6804c645c10874893bf08c496f422/Screenshot%202024-02-16%20231520.png)
 
 Output
+![image_alt](https://github.com/Darshants6364/DETECTIFY-CNN-Based-Image-Tampering-Detection/blob/500ec413075c0d389b119a5b6e9ad57eeda83c30/Screenshot%202024-02-16%20234715.png)
+
+![image_alt](https://github.com/Darshants6364/DETECTIFY-CNN-Based-Image-Tampering-Detection/blob/500ec413075c0d389b119a5b6e9ad57eeda83c30/Screenshot%202024-02-29%20085816.png)
+
+![image_alt](https://github.com/Darshants6364/DETECTIFY-CNN-Based-Image-Tampering-Detection/blob/500ec413075c0d389b119a5b6e9ad57eeda83c30/Screenshot%202024-04-24%20020247.png)
+
+![image_alt](https://github.com/Darshants6364/DETECTIFY-CNN-Based-Image-Tampering-Detection/blob/500ec413075c0d389b119a5b6e9ad57eeda83c30/Screenshot%202024-04-24%20021303.png)
